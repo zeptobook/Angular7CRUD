@@ -1,0 +1,34 @@
+<div class="container col-md-12"> 
+    <div>
+        <button (click)="addProduct()" class="btn btn-info">Add Product</button>
+      </div> 
+  <h2>All Products</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table table-dark table-hover table-striped">  
+      <thead class="thead-light">  
+        <tr>  
+          <th>Title</th>  
+          <th>Description</th> 
+          <th>Price($)</th> 
+          <th>Company</th>
+          <th>Action</th> 
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let product of products"> 
+           
+          <td>{{product.title}}</td>  
+          <td>{{product.description}}</td>
+          <td>{{product.price | currency : "USD" : true}}</td> 
+          <td>{{product.company}}</td> 
+           
+          <td>  
+            <button (click)="deleteProduct(product)" class="btn btn-info"> Delete</button>  
+            <button (click)="updateProduct(product)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div> 
+   
+</div> 
