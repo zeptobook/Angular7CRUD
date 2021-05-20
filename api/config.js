@@ -1,4 +1,4 @@
 module.exports = {
-    url: '<Specify Your DB Url here>',
+    url: 'mongodb://database/angular7crud',
     serverport: 3000 
 }
